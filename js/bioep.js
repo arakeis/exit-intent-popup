@@ -147,7 +147,10 @@ window.bioEp = {
 
 		// Save body overflow value and hide scrollbars
 		this.overflowDefault = document.body.style.overflow;
-		document.body.style.overflow = "hidden";
+		
+		// Test if scrollbars are present
+		if(this.get(0).scrollHeight > this.get(0).clientHeight)
+			document.body.style.overflow = "hidden";
 
 		this.shown = true;
 		
